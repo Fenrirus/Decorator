@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Text;
 
 namespace Decorator
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Pizza pizza = new LargePizza();
+            pizza = new CheesePizzaDecorator(pizza);
+            Console.WriteLine("Name: " + pizza.GetName() + " Cost: " + pizza.GetCost().ToString("C2"));
+            Console.ReadLine();
         }
     }
 }

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Decorator
+﻿namespace Decorator
 {
-    class Pizza
+    public abstract class Pizza
     {
+        public abstract string GetName();
+
+        public abstract double GetCost();
     }
 }
